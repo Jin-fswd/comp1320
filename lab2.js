@@ -35,8 +35,7 @@ function getDayOfTheWeek(year, month, day, dist){
     if ((keyOfMonth == "JAN" || keyOfMonth == "FEB") && isLeapYear(year)) {
         step5 = (step5 - 1);
     }
-    if (isLeapYear(year)) {
-            if (year >= 1600 && year < 1700) {
+    if (year >= 1600 && year < 1700) {
                 step5 = (step5 + 6);
             } else if (year >= 1700 && year < 1800) {
                 step5 = (step5 + 4);
@@ -49,8 +48,6 @@ function getDayOfTheWeek(year, month, day, dist){
             } else if (year >= 2100) {
                 step5 = (step5 + 4);
             } 
-     }
-
     let step6 = (step1 + step2 + step3 + step4 + step5)%7;
     //console.log(`(${step1} + ${step2} + ${step3} + ${step4}  + ${step5} )% 7 : ${step6}`);
     
@@ -62,8 +59,9 @@ function getDayOfTheWeek(year, month, day, dist){
         return dayArr[step6];
         } else {
         return "0";
-     }  
-}
+        }
+}  
+
 
 function makeCalendar(year) {
     const monthList = {
