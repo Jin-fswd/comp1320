@@ -83,7 +83,7 @@ function makeCalendar(year) {
             //month 1   2   3   4   5   6   7   8   9   10  11   12
     if(isLeapYear(year)) {
          fullDay[1] = fullDay[1]+1;
-    };
+    }
 
     for(let [key, value] of Object.entries(monthList)) {
         for(let i=1; i<=fullDay[value-1];i++) {
