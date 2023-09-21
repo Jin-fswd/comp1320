@@ -62,9 +62,7 @@ function getDayOfTheWeek(year, month, day, dist){
         return dayArr[step6];
         } else {
         return "0";
-     }
-         
-     
+     }  
 }
 
 
