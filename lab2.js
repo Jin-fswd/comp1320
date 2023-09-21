@@ -35,7 +35,7 @@ function getDayOfTheWeek(year, month, day, dist){
     if ((keyOfMonth == "JAN" || keyOfMonth == "FEB") && isLeapYear(year)) {
         step5 = (step5 - 1);
     }
-    if (isLeapYear(year)){
+    if (isLeapYear(year)) {
             if (year >= 1600 && year < 1700) {
                 step5 = (step5 + 6);
             } else if (year >= 1700 && year < 1800) {
@@ -52,17 +52,19 @@ function getDayOfTheWeek(year, month, day, dist){
      }
 
     let step6 = (step1 + step2 + step3 + step4 + step5)%7;
+    //console.log(`(${step1} + ${step2} + ${step3} + ${step4}  + ${step5} )% 7 : ${step6}`);
     
-    console.log(`(${step1} + ${step2} + ${step3} + ${step4}  + ${step5} )% 7 : ${step6}`);
-     if(dist == "m"){
-         //called by main.js
+     if(dist == "m") {
+        //called by main.js
         return `${month} ${day}, ${year} ${dayArr[step6]}`;
         } else if (dist == "c") {
             //called by makeCalender
         return dayArr[step6];
         } else {
-        return "0"
-        }
+        return "0";
+     }
+         
+     
 }
 
 
@@ -85,16 +87,12 @@ function makeCalendar(year) {
     let fullDay = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
             //index 0   1   2   3   4   5   6   7   8   9   10   11
             //month 1   2   3   4   5   6   7   8   9   10  11   12
-     if(isLeapYear(year)){g
+     if(isLeapYear(year)) {
          fullDay[1] = fullDay[1]+1;
-     }
+     };
 
-    for(let [key, value] of Object.entries(monthList)){
-        //console.log(`key : ${key} value : ${value}`);
+    for(let [key, value] of Object.entries(monthList)) {
         for(let i=1; i<=fullDay[value-1];i++) {
-            //------------------------------------------------------------
-            //console.log(`${year}년 ${value}월 ${i}일`);
-            //------------------------------------------------------------
            console.log( `${value}-${i}-${year} is a ${getDayOfTheWeek(year, key, i, "c")}`);
         }
     }

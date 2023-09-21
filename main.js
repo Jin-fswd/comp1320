@@ -1,11 +1,6 @@
 const lab2 = require("./lab2.js");
 const readline = require("readline-sync");
 
-//test---------------------------------------
-//console.log(lab2.getDayOfTheWeek(1989,"August",16));
-//console.log(lab2.getDayOfTheWeek(1950,"March",20));
-//console.log(lab2.getDayOfTheWeek(1992,"Feb",29,'m'));
-//-------------------------------------------
 const question = readline.question("get dat of week = 1, make calendar(2019) = 2    : ");
 if (question == 1) {
     const year = readline.question("Enter a year : ");
