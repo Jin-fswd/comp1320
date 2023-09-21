@@ -65,8 +65,6 @@ function getDayOfTheWeek(year, month, day, dist){
      }  
 }
 
-
-
 function makeCalendar(year) {
     const monthList = {
         'Jan':1,
@@ -95,4 +93,5 @@ function makeCalendar(year) {
         }
     }
 }
+
 module.exports = { getDayOfTheWeek, isLeapYear, makeCalendar };
